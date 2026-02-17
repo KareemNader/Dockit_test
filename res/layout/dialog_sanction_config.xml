@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Sanction Lists Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Sanction Lists:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbMLCU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MLCU" />
+
+        <CheckBox
+            android:id="@+id/cbOFAC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OFAC" />
+
+        <CheckBox
+            android:id="@+id/cbUN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UN Sanctions" />
+
+        <CheckBox
+            android:id="@+id/cbEU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EU Sanctions" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Document Number Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Fields:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbUseDocumentNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use Document Number" />
+
+        <EditText
+            android:id="@+id/etDocumentNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Document Number"
+            android:enabled="false"
+            android:layout_marginStart="32dp"/>
+
+        <EditText
+            android:id="@+id/etDocumentCutoff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cutoff Score (0.0 - 1.0)"
+            android:inputType="numberDecimal"
+            android:enabled="false"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Full Name Section -->
+        <CheckBox
+            android:id="@+id/cbUseFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use Full Name" />
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:enabled="false"
+            android:layout_marginStart="32dp"/>
+
+        <EditText
+            android:id="@+id/etNameCutoff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cutoff Score (0.0 - 1.0)"
+            android:inputType="numberDecimal"
+            android:enabled="false"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="12dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Additional Options -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Additional Options:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbMatchAllFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Match All Fields (Strict Mode)" />
+
+        <CheckBox
+            android:id="@+id/cbTransliterate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transliterate Names" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note: Match All Fields requires ALL selected fields to match. Uncheck for ANY field match."
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

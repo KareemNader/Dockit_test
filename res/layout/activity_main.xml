@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFFFF">
+
+    <LinearLayout
+        android:id="@+id/transliterateButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:weightSum="2"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/transliterateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transliterate by Fields"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6B5B95"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/transliterateByTransactionButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transliterate by ID"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6B5B95"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnStartLiveness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Liveness"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#6B5B95"
+        android:layout_above="@id/buttonContainer"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnQueryTransaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transaction Inquiry"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6B5B95"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/startDockitButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Dockit"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6B5B95"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <!-- FRA Flow Button - Between the two rows -->
+    <Button
+        android:id="@+id/btnStartFRAFlow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonContainer"
+        android:text="Start FRA KYC Flow"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#6B5B95"
+        android:layout_marginTop="16dp"/>
+    <Button
+        android:id="@+id/btnViewDebugLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Debug Log" />
+
+    <Button
+        android:id="@+id/checkSanctionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Sanction"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#6B5B95"
+        android:layout_below="@id/btnStartFRAFlow"
+        android:layout_marginTop="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/checkSanctionButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:fillViewport="false">
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result of sanction check will appear here"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textIsSelectable="true"/>
+
+    </ScrollView>
+
+</RelativeLayout>
